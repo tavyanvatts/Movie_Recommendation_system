@@ -7,6 +7,11 @@ A complete end-to-end machine learning project featuring a data training pipelin
 ## 📌 Project Overview
 This system recommends 5 similar movies based on a user's selection. It utilizes **Content-Based Filtering** by analyzing movie metadata tags (such as directors, cast, country, and ratings) and computing structural similarities.
 
+<p align="center">
+  <img src="images/Screenshot 2026-09-24 222842.png" alt="Streamlit App Screenshot" width="750">
+</p>
+
+
 ### 🧠 How It Works:
 1. **Data Engineering:** Text features from the Netflix dataset are preprocessed, cleaned, and combined into comprehensive text tags.
 2. **Vectorization:** Tags are converted into mathematical vectors using text vectorization techniques.
