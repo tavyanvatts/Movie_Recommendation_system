@@ -1,6 +1,25 @@
+import os
 import streamlit as st
 import pickle
 import pandas as pd
+
+
+try:
+    import gdown
+except ImportError:
+    os.system('pip install gdown')
+    import gdown
+
+FILES_TO_DOWNLOAD = {
+    "movies_dict.pkl": "1aAP_qAHj2IPHBSu-krj_iLcCY85ZKz2G",
+    "movies.pkl": "1pjd9-oW4Bt0RdEyYEBxTuanb0dkQ2wY_",
+    "similarity.pkl": "1do8NLqFLMs046svy2p9PtDZ9jPFrmxEQ"
+}
+for filename, file_id in FILES_TO_DOWNLOAD.items():
+    if not os.path.exists(filename):
+        with st.spinner(f"Downloading {filename} from cloud storage... Please wait."):
+            url = f"https://drive.google.com/uc?id={file_id}"
+            gdown.download(url, filename, quiet=False)
 
 def recommend(movie):
   movie_index = movies[movies['title'] == movie].index[0]

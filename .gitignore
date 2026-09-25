@@ -1,6 +1,15 @@
+# Virtual environment
 .venv/
-.idea/
+venv/
+ENV/
+
+# Python cache
 __pycache__/
-*.pkl
-*.zip
-*.csv
+*.py[cod]
+*$py.class
+
+# Large files / Data (handled by gdown in app.py)
+movies.pkl
+movies_dict.pkl
+similarity.pkl
+netflix_titles.csv.zip
